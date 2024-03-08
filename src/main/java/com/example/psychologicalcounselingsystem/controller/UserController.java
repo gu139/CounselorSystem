@@ -28,7 +28,6 @@ public class UserController {
         return userService.getUserByUserID(userID);
     }
 
-    // 登录
 
     // 查询所有user
     @GetMapping("/all")
@@ -36,6 +35,15 @@ public class UserController {
         return userService.getAllUsers();
     }
 
+    // 登录
+    @PostMapping("/login")
+    public boolean loginUser(@RequestBody User user){
+        User user1 = userService.getUserByUserID(user.getUserID());
+        if (user1.getUserPassword().equals(user.getUserPassword()))
+        { return true; }
+        else
+            return false;
+    }
     // 添加user
     @PostMapping("/add")
     public boolean addUser(@RequestBody User user) {
