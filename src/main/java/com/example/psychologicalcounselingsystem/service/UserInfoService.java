@@ -1,7 +1,7 @@
 package com.example.psychologicalcounselingsystem.service;
 
 import com.example.psychologicalcounselingsystem.mybatis.entity.UserInfo;
-import org.apache.ibatis.annotations.Param;
+
 
 import java.util.List;
 
