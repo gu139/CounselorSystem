@@ -25,15 +25,15 @@ public interface UserMapper {
     // 添加user
     @Insert("insert into user (userID, userPassword) values (#{userID}, #{userPassword})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
-    int addUser(User user);
+    boolean addUser(User user);
 
     // 修改user
     @Update("update user set userID = #{userID}, userPassword = #{userPassword} where Id = #{id}")
-    int updateUser(User user);
+    boolean updateUser(User user);
 
     // 删除user
     @Delete("delete from user where Id = #{id}")
-    int deleteUser(@Param("id") int id);
+    boolean deleteUser(@Param("id") int id);
 
 
 }

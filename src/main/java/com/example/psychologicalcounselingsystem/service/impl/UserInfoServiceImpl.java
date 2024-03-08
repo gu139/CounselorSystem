@@ -28,22 +28,22 @@ public class UserInfoServiceImpl implements UserInfoService {
     }
 
     @Override
-    public int addUserInfo(UserInfo userInfo) {
+    public boolean addUserInfo(UserInfo userInfo) {
         return userInfoMapper.addUserInfo(userInfo);
     }
 
     @Override
-    public int updateUserInfoName(UserInfo userInfo){
+    public boolean updateUserInfoName(UserInfo userInfo){
         return userInfoMapper.updateUserInfoName(userInfo);
     }
 
     @Override
-    public int updateUserInfoAll(UserInfo userInfo){
-        return userInfoMapper.updateUserInfoAll(userInfo);
+    public boolean updateUserInfo(UserInfo userInfo){
+        return userInfoMapper.updateUserInfo(userInfo);
     }
 
     @Override
-    public int deleteUserInfo(int id){
+    public boolean deleteUserInfo(int id){
         return userInfoMapper.deleteUserInfo(id);
     }
 }
