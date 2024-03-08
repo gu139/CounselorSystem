@@ -9,8 +9,8 @@ public interface UserInfoService {
     UserInfo getUserInfoById(int id);
     UserInfo getUserInfoByUserID(int userID);
     List<UserInfo> getAllUserInfos();
-    int addUserInfo(UserInfo userInfo);
-    int updateUserInfoAll(UserInfo userInfo);
-    int updateUserInfoName(UserInfo userInfo);
-    int deleteUserInfo(int id);
+    boolean addUserInfo(UserInfo userInfo);
+    boolean updateUserInfo(UserInfo userInfo);
+    boolean updateUserInfoName(UserInfo userInfo);
+    boolean deleteUserInfo(int id);
 }

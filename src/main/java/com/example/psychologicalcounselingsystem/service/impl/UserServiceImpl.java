@@ -32,16 +32,16 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean addUser(User user) {
-        return userMapper.addUser(user) > 0;
+        return userMapper.addUser(user);
     }
 
     @Override
     public boolean updateUser(User user) {
-        return userMapper.updateUser(user) > 0;
+        return userMapper.updateUser(user);
     }
 
     @Override
     public boolean deleteUser(int id) {
-        return userMapper.deleteUser(id) > 0;
+        return userMapper.deleteUser(id);
     }
 }

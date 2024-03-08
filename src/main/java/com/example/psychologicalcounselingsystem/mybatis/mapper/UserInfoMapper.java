@@ -25,15 +25,15 @@ public interface UserInfoMapper {
     // 添加userinfo
     @Insert("insert into userinfo (userID, userName,userPhonenum,userProfect,userLocation,userAddress) values (#{userID}, #{userName},#{userPhonenum},#{userProfect},#{userLocation},#{userAddress})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
-    int addUserInfo(UserInfo userInfo);
+    boolean addUserInfo(UserInfo userInfo);
 
     // 修改userinfo
     @Update("update userinfo set  userName = #{userName} where Id = #{id}")
-    int updateUserInfoName(UserInfo userInfo);
+    boolean updateUserInfoName(UserInfo userInfo);
 
-    @Update("UPDATE userinfo SET userID = #{userID}, userName = #{userName}, userPhonenum = #{userPhonenum}, userProfect = #{userProfect}, userLocation = #{userLocation}, userAddress = #{userAddress} WHERE id = #{id}")
-    int updateUserInfoAll(UserInfo userInfo);
+    @Update("UPDATE userinfo SET userID = #{userInfo.userID}, userName = #{userInfo.userName}, userPhonenum = #{userInfo.userPhonenum}, userProfect = #{userInfo.userProfect}, userLocation = #{userInfo.userLocation}, userAddress = #{userInfo.userAddress} WHERE id = #{userInfo.id}")
+    boolean updateUserInfo(@Param("userInfo") UserInfo userInfo);
     // 删除userinfo
     @Delete("delete from userinfo where Id = #{id}")
-    int deleteUserInfo(@Param("id") int id);
+    boolean deleteUserInfo(@Param("id") int id);
 }

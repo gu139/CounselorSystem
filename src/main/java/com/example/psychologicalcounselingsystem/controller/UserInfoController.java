@@ -29,7 +29,12 @@ public class UserInfoController {
     }
 
     @PostMapping("/add")
-    public int addUserInfo(@RequestBody UserInfo userInfo) {
+    public boolean addUserInfo(@RequestBody UserInfo userInfo) {
         return userInfoService.addUserInfo(userInfo);
+    }
+
+    @PostMapping("/update")
+    public boolean updateUserInfo(@RequestBody UserInfo userInfo){
+        return userInfoService.updateUserInfo(userInfo);
     }
 }
