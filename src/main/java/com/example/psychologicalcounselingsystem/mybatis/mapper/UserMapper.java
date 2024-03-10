@@ -32,8 +32,12 @@ public interface UserMapper {
     boolean updateUser(User user);
 
     // 删除user
+    // 删除user
+    @Delete("delete from user where userID = #{userid}")
+    boolean deleteUser(@Param("userid") int userid);
+
     @Delete("delete from user where Id = #{id}")
-    boolean deleteUser(@Param("id") int id);
+    boolean deleteUser1(@Param("id") int id);
 
 
 }

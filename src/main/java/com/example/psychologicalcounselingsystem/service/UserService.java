@@ -21,4 +21,5 @@ public interface UserService {
 
     // 删除user
     boolean deleteUser(int id);
+
 }
