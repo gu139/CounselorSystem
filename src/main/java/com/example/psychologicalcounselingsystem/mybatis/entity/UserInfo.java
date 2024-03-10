@@ -26,6 +26,15 @@ public class UserInfo implements Serializable {
     public UserInfo() {
     }
 
+    public UserInfo(int userID, String userName, String userPhonenum, String userProfect, String userLocation, String userAddress) {
+        this.userID = userID;
+        this.userName = userName;
+        this.userPhonenum = userPhonenum;
+        this.userProfect = userProfect;
+        this.userLocation = userLocation;
+        this.userAddress = userAddress;
+    }
+
     public UserInfo(int id, int userID, String userName, String userPhonenum, String userProfect, String userLocation, String userAddress) {
         this.id = id;
         this.userID = userID;
