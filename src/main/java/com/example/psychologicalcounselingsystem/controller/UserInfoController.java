@@ -37,4 +37,11 @@ public class UserInfoController {
     public boolean updateUserInfo(@RequestBody UserInfo userInfo){
         return userInfoService.updateUserInfo(userInfo);
     }
+
+    //根据userID删除userinfo
+    @PostMapping("/delete/{userID}")
+    public boolean deleteUserInfoByUserID(@PathVariable("userID") int userID){return userInfoService.deleteUserInfoByUserID(userID);}
+
+    @PostMapping("/delete/{id}")
+    public boolean deleteUserInfo(@PathVariable("id") int id){return userInfoService.deleteUserInfo(id);}
 }

@@ -36,7 +36,11 @@ public interface UserInfoMapper {
     @ResultMap("userInfoMap")
     boolean updateUserInfo(@Param("userInfo") UserInfo userInfo);
     // 删除userinfo
-    @Delete("delete from userinfo where Id = #{id}")
+    @Delete("delete from userinfo where id = #{id}")
     @ResultMap("userInfoMap")
     boolean deleteUserInfo(@Param("id") int id);
+
+    @Delete("delete from userinfo where userID =#{userID}")
+    @ResultMap("userInfoMap")
+    boolean deleteUserInfoByUserID(@Param("userID")int userID);
 }

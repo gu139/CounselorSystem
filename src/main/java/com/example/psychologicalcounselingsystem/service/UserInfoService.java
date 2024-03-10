@@ -13,4 +13,5 @@ public interface UserInfoService {
     boolean updateUserInfo(UserInfo userInfo);
     boolean updateUserInfoName(UserInfo userInfo);
     boolean deleteUserInfo(int id);
+    boolean deleteUserInfoByUserID(int userID);
 }

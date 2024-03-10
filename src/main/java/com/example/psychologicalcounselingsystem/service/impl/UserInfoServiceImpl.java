@@ -46,4 +46,9 @@ public class UserInfoServiceImpl implements UserInfoService {
     public boolean deleteUserInfo(int id){
         return userInfoMapper.deleteUserInfo(id);
     }
+
+    @Override
+    public boolean deleteUserInfoByUserID(int userid){
+        return userInfoMapper.deleteUserInfoByUserID(userid);
+    }
 }
