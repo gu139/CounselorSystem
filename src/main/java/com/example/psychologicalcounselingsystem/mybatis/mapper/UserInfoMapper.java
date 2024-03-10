@@ -32,7 +32,8 @@ public interface UserInfoMapper {
     @ResultMap("userInfoMap")
     boolean updateUserInfoName(UserInfo userInfo);
 
-    @Update("UPDATE userinfo SET userID = #{userInfo.userID}, userName = #{userInfo.userName}, userPhonenum = #{userInfo.userPhonenum}, userProfect = #{userInfo.userProfect}, userLocation = #{userInfo.userLocation}, userAddress = #{userInfo.userAddress} WHERE id = #{userInfo.id}")
+    //修改userinfo,通过userID
+    @Update("UPDATE userinfo SET  userName = #{userInfo.userName}, userPhonenum = #{userInfo.userPhonenum}, userProfect = #{userInfo.userProfect}, userLocation = #{userInfo.userLocation}, userAddress = #{userInfo.userAddress} WHERE userID = #{userInfo.userID}")
     @ResultMap("userInfoMap")
     boolean updateUserInfo(@Param("userInfo") UserInfo userInfo);
     // 删除userinfo
