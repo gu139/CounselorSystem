@@ -7,7 +7,8 @@ import java.util.List;
 
 @Mapper
 public interface UserInfoMapper {
-    @Select("select * from userinfo where Id = #{id}")
+    //id查找
+    @Select("select * from userinfo where id = #{id}")
     @ResultMap("userInfoMap")
     UserInfo getUserInfoById(@Param("id") int id);
 
