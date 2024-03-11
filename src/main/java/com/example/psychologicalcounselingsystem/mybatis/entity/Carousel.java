@@ -5,7 +5,7 @@ package com.example.psychologicalcounselingsystem.mybatis.entity;
 public class Carousel {
 
 
-    private int id;
+    private Integer id;
     private String imgSrc;
 
     public Carousel(int id, String imgSrc) {
@@ -16,7 +16,7 @@ public class Carousel {
     public Carousel() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

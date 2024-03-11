@@ -6,12 +6,12 @@ import com.example.psychologicalcounselingsystem.mybatis.entity.UserInfo;
 import java.util.List;
 
 public interface UserInfoService {
-    UserInfo getUserInfoById(int id);
-    UserInfo getUserInfoByUserID(int userID);
+    UserInfo getUserInfoById(Integer id);
+    UserInfo getUserInfoByUserID(Integer userID);
     List<UserInfo> getAllUserInfos();
     boolean addUserInfo(UserInfo userInfo);
     boolean updateUserInfo(UserInfo userInfo);
     boolean updateUserInfoName(UserInfo userInfo);
-    boolean deleteUserInfo(int id);
+    boolean deleteUserInfo(Integer id);
     boolean deleteUserInfoByUserID(int userID);
 }

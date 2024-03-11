@@ -15,12 +15,12 @@ public class NewsController {
     private NewsService newsService;
 
     @GetMapping("/{newsID}")
-    public News getNewsByNewsID(@PathVariable int newsID) {
+    public News getNewsByNewsID(@PathVariable Integer newsID) {
         return newsService.getNewsByNewsID(newsID);
     }
 
     @GetMapping("/kind/{kind}")
-    public List<News> getNewsByKind(@PathVariable int kind) {
+    public List<News> getNewsByKind(@PathVariable Integer kind) {
         return newsService.getNewsByKind(kind);
     }
 
@@ -45,7 +45,7 @@ public class NewsController {
     }
 
     @DeleteMapping("/delete/{newsID}")
-    public boolean deleteNews(@PathVariable int newsID) {
+    public boolean deleteNews(@PathVariable Integer newsID) {
         return newsService.deleteNews(newsID);
     }
 }

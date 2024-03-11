@@ -5,10 +5,10 @@ import java.util.List;
 
 public interface UserService {
     // 根据id查询user
-    User getUserById(int id);
+    User getUserById(Integer id);
 
     // 根据userID查询user
-    User getUserByUserID(int userID);
+    User getUserByUserID(Integer userID);
 
     // 查询所有user
     List<User> getAllUsers();
@@ -20,6 +20,6 @@ public interface UserService {
     boolean updateUser(User user);
 
     // 删除user
-    boolean deleteUser(int id);
+    boolean deleteUser(Integer id);
 
 }

@@ -1,7 +1,7 @@
 package com.example.psychologicalcounselingsystem.service.impl;
 
 import com.example.psychologicalcounselingsystem.mybatis.entity.Carousel;
-import com.example.psychologicalcounselingsystem.mybatis.mapper.CarouselMapper;
+import com.example.psychologicalcounselingsystem.mybatis.DAO.CarouselMapper;
 import com.example.psychologicalcounselingsystem.service.CarouselService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ public class CarouselServiceImpl implements CarouselService {
 
     // 根据id查找轮播图
     @Override
-    public Carousel getCarousel(int id) {
+    public Carousel getCarousel(Integer id) {
         return carouselMapper.getCarousel(id);
     }
 
@@ -42,7 +42,7 @@ public class CarouselServiceImpl implements CarouselService {
 
     // 根据id删除轮播图
     @Override
-    public boolean deleteCarousel(int id) {
+    public boolean deleteCarousel(Integer id) {
         return carouselMapper.deleteCarousel(id);
     }
 }

@@ -1,7 +1,7 @@
 package com.example.psychologicalcounselingsystem.service.impl;
 
 import com.example.psychologicalcounselingsystem.mybatis.entity.News;
-import com.example.psychologicalcounselingsystem.mybatis.mapper.NewsMapper;
+import com.example.psychologicalcounselingsystem.mybatis.DAO.NewsMapper;
 import com.example.psychologicalcounselingsystem.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,12 +15,12 @@ public class NewsServiceImpl implements NewsService {
     private NewsMapper newsMapper;
 
     @Override
-    public News getNewsByNewsID(int newsID) {
+    public News getNewsByNewsID(Integer newsID) {
         return newsMapper.getNewsByNewsID(newsID);
     }
 
     @Override
-    public List<News> getNewsByKind(int kind) {
+    public List<News> getNewsByKind(Integer kind) {
         return newsMapper.getNewsByKind(kind);
     }
 

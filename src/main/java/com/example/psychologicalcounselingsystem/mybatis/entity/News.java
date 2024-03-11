@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.sql.Date;
 
 public class News implements Serializable {
-    private int newsID;
-    private int kind;
+    private Integer newsID;
+    private Integer kind;
     private String imgSrc;
     private String newsTitle;
     private Date newsTime;
@@ -18,7 +18,7 @@ public class News implements Serializable {
         this.newsNote = newsNote;
     }
     //没有newsID
-    public News(int kind, String imgSrc, String newsTitle, Date newsTime, String newsNote) {
+    public News(Integer kind, String imgSrc, String newsTitle, Date newsTime, String newsNote) {
         this.kind = kind;
         this.imgSrc = imgSrc;
         this.newsTitle = newsTitle;
@@ -26,14 +26,14 @@ public class News implements Serializable {
         this.newsNote = newsNote;
     }
     //没有king和Img
-    public News(int newsID, String newsTitle, Date newsTime, String newsNote) {
+    public News(Integer newsID, String newsTitle, Date newsTime, String newsNote) {
         this.newsID = newsID;
         this.newsTitle = newsTitle;
         this.newsTime = newsTime;
         this.newsNote = newsNote;
     }
 
-    public News(int newsID, int kind, String imgSrc, String newsTitle, Date newsTime, String newsNote) {
+    public News(Integer newsID, Integer kind, String imgSrc, String newsTitle, Date newsTime, String newsNote) {
         this.newsID = newsID;
         this.kind = kind;
         this.imgSrc = imgSrc;
@@ -42,7 +42,7 @@ public class News implements Serializable {
         this.newsNote = newsNote;
     }
 
-    public int getNewsID() {
+    public Integer getNewsID() {
         return newsID;
     }
 
@@ -50,7 +50,7 @@ public class News implements Serializable {
         this.newsID = newsID;
     }
 
-    public int getKind() {
+    public Integer getKind() {
         return kind;
     }
 

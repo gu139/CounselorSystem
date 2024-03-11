@@ -29,7 +29,7 @@ public class CarouselController {
     }
 
     // 根据id修改轮播图
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public boolean updateCarousel(@PathVariable int id, @RequestBody Carousel carousel) {
         carousel.setId(id);
         return carouselService.updateCarousel(carousel);
@@ -42,7 +42,7 @@ public class CarouselController {
     }
 
     // 根据id删除轮播图
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public boolean deleteCarousel(@PathVariable int id) {
         return carouselService.deleteCarousel(id);
     }

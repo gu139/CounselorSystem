@@ -1,4 +1,4 @@
-package com.example.psychologicalcounselingsystem.mybatis.mapper;
+package com.example.psychologicalcounselingsystem.mybatis.DAO;
 
 import com.example.psychologicalcounselingsystem.mybatis.entity.UserInfo;
 import org.apache.ibatis.annotations.*;
@@ -10,12 +10,12 @@ public interface UserInfoMapper {
     //id查找
     @Select("select * from userinfo where id = #{id}")
     @ResultMap("userInfoMap")
-    UserInfo getUserInfoById(@Param("id") int id);
+    UserInfo getUserInfoById(@Param("id") Integer id);
 
     // 根据userID查询userinfo
     @Select("select * from userinfo where userID = #{userID}")
     @ResultMap("userInfoMap")
-    UserInfo getUserInfoByUserID(@Param("userID") int userID);
+    UserInfo getUserInfoByUserID(@Param("userID") Integer userID);
 
     // 查询所有userinfo
     @Select("select * from userinfo")
@@ -39,9 +39,9 @@ public interface UserInfoMapper {
     // 删除userinfo
     @Delete("delete from userinfo where id = #{id}")
     @ResultMap("userInfoMap")
-    boolean deleteUserInfo(@Param("id") int id);
+    boolean deleteUserInfo(@Param("id") Integer id);
 
     @Delete("delete from userinfo where userID =#{userID}")
     @ResultMap("userInfoMap")
-    boolean deleteUserInfoByUserID(@Param("userID")int userID);
+    boolean deleteUserInfoByUserID(@Param("userID")Integer userID);
 }

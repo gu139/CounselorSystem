@@ -23,19 +23,19 @@ package com.example.psychologicalcounselingsystem.mybatis.entity;
 import java.io.Serializable;
 
 public class User implements Serializable {
-    private int id;
-    private int userID;
+    private Integer id;
+    private Integer userID;
     private String userPassword;
 
     public User() {
     }
 
-    public User(int userID,String userPassword){
+    public User(Integer userID,String userPassword){
         this.userID= userID;
         this.userPassword=userPassword;
     }
 
-    public User(int id, int userID, String userPassword) {
+    public User(Integer id, Integer userID, String userPassword) {
         this.id = id;
         this.userID = userID;
         this.userPassword = userPassword;

@@ -2,7 +2,7 @@ package com.example.psychologicalcounselingsystem.service.impl;
 
 import com.example.psychologicalcounselingsystem.service.UserService;
 import com.example.psychologicalcounselingsystem.mybatis.entity.User;
-import com.example.psychologicalcounselingsystem.mybatis.mapper.UserMapper;
+import com.example.psychologicalcounselingsystem.mybatis.DAO.UserMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,12 +16,12 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public User getUserById(int id) {
+    public User getUserById(Integer id) {
         return userMapper.getUserById(id);
     }
 
     @Override
-    public User getUserByUserID(int userID) {
+    public User getUserByUserID(Integer userID) {
         return userMapper.getUserByUserID(userID);
     }
 
@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean deleteUser(int id) {
+    public boolean deleteUser(Integer id) {
         return userMapper.deleteUser(id);
     }
 }
