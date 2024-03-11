@@ -1,4 +1,4 @@
-package com.example.psychologicalcounselingsystem.mybatis.mapper;
+package com.example.psychologicalcounselingsystem.mybatis.DAO;
 
 import com.example.psychologicalcounselingsystem.mybatis.entity.Carousel;
 import org.apache.ibatis.annotations.*;
@@ -9,7 +9,7 @@ import java.util.List;
 public interface CarouselMapper {
     //id 查找
     @Select("select * from carousel where id = #{id}")
-    Carousel getCarousel(int id);
+    Carousel getCarousel(Integer id);
 
     //所有
     @Select("select * from carousel")
@@ -26,5 +26,5 @@ public interface CarouselMapper {
 
     //删
     @Delete("delete from carousel where id = #{id}")
-    boolean deleteCarousel(int id);
+    boolean deleteCarousel(Integer id);
 }

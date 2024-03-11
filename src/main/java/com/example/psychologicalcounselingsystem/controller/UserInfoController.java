@@ -14,7 +14,7 @@ public class UserInfoController {
     private UserInfoService userInfoService;
 
     @GetMapping("/{id}")
-    public UserInfo getUserInfoById(@PathVariable int id) {
+    public UserInfo getUserInfoById(@PathVariable Integer id) {
         return userInfoService.getUserInfoById(id);
     }
 
@@ -40,8 +40,8 @@ public class UserInfoController {
 
     //根据userID删除userinfo
     @PostMapping("/deleteByUserID/{userID}")
-    public boolean deleteUserInfoByUserID(@PathVariable("userID") int userID){return userInfoService.deleteUserInfoByUserID(userID);}
+    public boolean deleteUserInfoByUserID(@PathVariable("userID") Integer userID){return userInfoService.deleteUserInfoByUserID(userID);}
 
     @PostMapping("/delete/{id}")
-    public boolean deleteUserInfo(@PathVariable("id") int id){return userInfoService.deleteUserInfo(id);}
+    public boolean deleteUserInfo(@PathVariable("id") Integer id){return userInfoService.deleteUserInfo(id);}
 }

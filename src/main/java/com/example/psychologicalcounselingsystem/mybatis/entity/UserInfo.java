@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class UserInfo implements Serializable {
 
-    private int id;
+    private Integer id;
 
-    private int userID;
+    private Integer userID;
 
     private String userName;
 
@@ -45,7 +45,7 @@ public class UserInfo implements Serializable {
         this.userAddress = userAddress;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -53,7 +53,7 @@ public class UserInfo implements Serializable {
         this.id = id;
     }
 
-    public int getUserID() {
+    public Integer getUserID() {
         return userID;
     }
 

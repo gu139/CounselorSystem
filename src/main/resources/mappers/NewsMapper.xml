@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--命名空间-->
-<mapper namespace="com.example.psychologicalcounselingsystem.mybatis.mapper.NewsMapper">
+<mapper namespace="com.example.psychologicalcounselingsystem.mybatis.DAO.NewsMapper">
 <resultMap id="newsMap" type="com.example.psychologicalcounselingsystem.mybatis.entity.News">
 
     <id property="newsID" column="newsID" />

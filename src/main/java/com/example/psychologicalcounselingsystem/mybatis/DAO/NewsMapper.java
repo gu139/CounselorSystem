@@ -1,4 +1,4 @@
-package com.example.psychologicalcounselingsystem.mybatis.mapper;
+package com.example.psychologicalcounselingsystem.mybatis.DAO;
 
 import com.example.psychologicalcounselingsystem.mybatis.entity.News;
 import org.apache.ibatis.annotations.*;
@@ -11,12 +11,12 @@ public interface NewsMapper {
     //  newsid查找
     @Select("select * from news where newsID =#{newsID}")
     @ResultMap("newsMap")
-    News getNewsByNewsID(@Param("newsID") int newsID);
+    News getNewsByNewsID(@Param("newsID") Integer newsID);
 
     // kind查找，分类查找所有News，kind是类型
     @Select("select * from news where kind = #{kind}")
     @ResultMap("newsMap")
-    List<News> getNewsByKind(@Param("kind") int kind);
+    List<News> getNewsByKind(@Param("kind") Integer kind);
 
     //所有news
     @Select("select * from news")
@@ -40,6 +40,6 @@ public interface NewsMapper {
 
     @Delete("delete from news where newsID = #{newsID}")
     @ResultMap("newsMap")
-    boolean deleteNews(@Param("newsID") int newsID);
+    boolean deleteNews(@Param("newsID") Integer newsID);
 }
 

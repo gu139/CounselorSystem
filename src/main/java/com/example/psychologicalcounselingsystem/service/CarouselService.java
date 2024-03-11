@@ -7,7 +7,7 @@ import java.util.List;
 // CarouselService接口，定义轮播图的业务逻辑
 public interface CarouselService {
     // 根据id查找轮播图
-    Carousel getCarousel(int id);
+    Carousel getCarousel(Integer id);
 
     // 获取所有轮播图
     List<Carousel> getAllCarousel();
@@ -19,5 +19,5 @@ public interface CarouselService {
     boolean addCarousel(Carousel carousel);
 
     // 根据id删除轮播图
-    boolean deleteCarousel(int id);
+    boolean deleteCarousel(Integer id);
 }

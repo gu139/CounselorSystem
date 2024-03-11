@@ -18,13 +18,13 @@ public class UserController {
 
     // 根据id查询user
     @GetMapping("/{id}")
-    public User getUserById(@PathVariable("id") int id) {
+    public User getUserById(@PathVariable("id") Integer id) {
         return userService.getUserById(id);
     }
 
     // 根据userID查询user
     @GetMapping("/byUserID/{userID}")
-    public User getUserByUserID(@PathVariable("userID") int userID) {
+    public User getUserByUserID(@PathVariable("userID") Integer userID) {
         return userService.getUserByUserID(userID);
     }
 
@@ -58,5 +58,5 @@ public class UserController {
 
     // 删除user
     @DeleteMapping("/delete/{id}")
-    public boolean deleteUser(@PathVariable("id") int id) {return userService.deleteUser(id);}
+    public boolean deleteUser(@PathVariable("id") Integer id) {return userService.deleteUser(id);}
 }
