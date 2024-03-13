@@ -10,43 +10,28 @@ public class News implements Serializable {
     private String newsTitle;
     private Date newsTime;
     private String newsNote;
+    private String newsContent;
 
     //没有newsID,king和Img
-    public News(String newsTitle, Date newsTime, String newsNote) {
-        this.newsTitle = newsTitle;
-        this.newsTime = newsTime;
-        this.newsNote = newsNote;
-    }
-    //没有newsID
-    public News(Integer kind, String imgSrc, String newsTitle, Date newsTime, String newsNote) {
-        this.kind = kind;
-        this.imgSrc = imgSrc;
-        this.newsTitle = newsTitle;
-        this.newsTime = newsTime;
-        this.newsNote = newsNote;
-    }
-    //没有king和Img
-    public News(Integer newsID, String newsTitle, Date newsTime, String newsNote) {
-        this.newsID = newsID;
-        this.newsTitle = newsTitle;
-        this.newsTime = newsTime;
-        this.newsNote = newsNote;
+    public News(){
+
     }
 
-    public News(Integer newsID, Integer kind, String imgSrc, String newsTitle, Date newsTime, String newsNote) {
+    public News(Integer newsID, Integer kind, String imgSrc, String newsTitle, Date newsTime, String newsNote ,String newsContent) {
         this.newsID = newsID;
         this.kind = kind;
         this.imgSrc = imgSrc;
         this.newsTitle = newsTitle;
         this.newsTime = newsTime;
         this.newsNote = newsNote;
+        this.newsContent=newsContent;
     }
 
     public Integer getNewsID() {
         return newsID;
     }
 
-    public void setNewsID(int newsID) {
+    public void setNewsID(Integer newsID) {
         this.newsID = newsID;
     }
 
@@ -54,7 +39,7 @@ public class News implements Serializable {
         return kind;
     }
 
-    public void setKind(int kind) {
+    public void setKind(Integer kind) {
         this.kind = kind;
     }
 
@@ -89,4 +74,14 @@ public class News implements Serializable {
     public void setNewsNote(String newsNote) {
         this.newsNote = newsNote;
     }
+
+    public String getNewsContent() {
+        return newsContent;
+    }
+
+    public void setNewsContent(String newsContent) {
+        this.newsContent = newsContent;
+    }
+
+
 }
