@@ -10,5 +10,6 @@
     <result property="newsTitle" column="newsTitle" />
     <result property="newsTime" column="newsTime" />
     <result property="newsNote" column="newsNote" />
+    <result property="newsContent" column="newsContent"/>
 </resultMap>
 </mapper>

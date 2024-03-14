@@ -24,17 +24,17 @@ public interface NewsMapper {
     List<News> getAllNews();
 
     //添加news,没有图片信息
-    @Insert("insert into news(newsID, newsTitle, newsTime, newsNote) VALUES (#{newsID},#{newsTitle},#{newsTime},#{newsNote})")
+    @Insert("insert into news(newsID, newsTitle, newsTime, newsNote ,newsContent) VALUES (#{newsID},#{newsTitle},#{newsTime},#{newsNote},#{newsContent})")
     @Options(useGeneratedKeys = true,keyProperty = "newsID")
     boolean addNewsWithoutImg(News news);
 
     //添加news，包含图片信息
-    @Insert("insert into news(newsID, imgSrc, newsTitle, newsTime, newsNote) VALUES (#{newsID},#{imgSrc},#{newsTitle},#{newsTime},#{newsNote})")
+    @Insert("insert into news(newsID, imgSrc, newsTitle, newsTime, newsNote ,newsContent) VALUES (#{newsID},#{imgSrc},#{newsTitle},#{newsTime},#{newsNote},#{newsContent})")
     @Options(useGeneratedKeys = true,keyProperty = "newsID")
     boolean addNews(News news);
     
     //修改News,通过newsID
-    @Update("update news set imgSrc=#{news.imgSrc},kind=#{news.kind}, newsTitle = #{news.newsTitle}, newsNote = #{news.newsNote} ,newsTime=#{news.newsTime} where newsID = #{news.newsID}")
+    @Update("update news set imgSrc=#{news.imgSrc},kind=#{news.kind}, newsTitle = #{news.newsTitle}, newsNote = #{news.newsNote} ,newsTime=#{news.newsTime} ,newsContent=#{newsContent} where newsID = #{news.newsID}")
     @ResultMap("newsMap")
     boolean updateNews(@Param("news")News news);
 
